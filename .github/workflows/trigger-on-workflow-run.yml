@@ -9,8 +9,8 @@ on:
 jobs:
   on_workflow_run:
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
-    environment: test
     runs-on: ubuntu-latest
+    environment: test
     steps:
       - name: Echo triggered
         run: echo "Triggered by Build CI Test workflow_run!" 
