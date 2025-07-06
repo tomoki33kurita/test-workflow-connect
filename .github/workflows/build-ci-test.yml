@@ -3,7 +3,7 @@ name: Build CI Test
 on:
   push:
     branches:
-      - main
+      - ciTest/simulation-prod
 
 jobs:
   build:
