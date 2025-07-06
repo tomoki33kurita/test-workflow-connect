@@ -1,0 +1,14 @@
+name: Trigger On Workflow Run
+
+on:
+  workflow_run:
+    workflows: ["Build CI Test"]
+    types:
+      - completed
+
+jobs:
+  on_workflow_run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo triggered
+        run: echo "Triggered by Build CI Test workflow_run!" 
