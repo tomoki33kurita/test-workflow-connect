@@ -28,4 +28,4 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Show artifact content
-        run: cat example-artifact/example.txt
+        run: cat example.txt
