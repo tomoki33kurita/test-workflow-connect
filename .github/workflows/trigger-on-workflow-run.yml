@@ -13,4 +13,10 @@ jobs:
     environment: test
     steps:
       - name: Echo triggered
-        run: echo "Triggered by Build CI Test workflow_run!" 
+        run: echo "Triggered by Build CI Test workflow_run!"
+      - name: Download artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: example-artifact
+      - name: Show artifact content
+        run: cat example.txt
