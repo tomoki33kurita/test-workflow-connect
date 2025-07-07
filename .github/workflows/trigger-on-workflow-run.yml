@@ -9,6 +9,7 @@ on:
 permissions:
   actions: read
   contents: read
+  packages: read
 
 jobs:
   on_workflow_run:
@@ -24,6 +25,7 @@ jobs:
         with:
           name: example-artifact
           run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Show artifact content
         run: cat example-artifact/example.txt
