@@ -6,10 +6,10 @@ on:
     types:
       - completed
 
-permissions:
-  actions: read
-  contents: read
-  packages: read
+# permissions:
+#   actions: read
+#   contents: read
+#   packages: read
 
 jobs:
   on_workflow_run:
