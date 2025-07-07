@@ -6,6 +6,10 @@ on:
     types:
       - completed
 
+permissions:
+  actions: read
+  contents: read
+
 jobs:
   on_workflow_run:
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
@@ -21,4 +25,4 @@ jobs:
           name: example-artifact
 
       - name: Show artifact content
-        run: cat example.txt
+        run: cat example-artifact/example.txt
